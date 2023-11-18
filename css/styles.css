@@ -1,0 +1,134 @@
+:root {
+  --color-white: #FFF;
+  --color-off-white: #FAFAFA;
+  --color-light-gray: #A4A2AD;
+  --color-dark-gray: #333;
+  --font: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 1.25em;
+}
+
+img {
+  margin: 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--color-off-white);
+}
+
+header {
+  padding: 2%;
+  text-align: center;
+}
+
+header img {
+  max-width: 500px;
+}
+
+.top-nav ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.top-nav ul a {
+  display: block;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-white);
+  color: var(--color-dark-gray);
+}
+
+section {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.footer-nav ul {
+  display: none;
+}
+
+.footer-nav > a:link {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer-nav > a:visited {
+  color: red;
+}
+
+/* ----- Media Queries ----- */
+
+@media only screen and (min-width: 768px) {
+  .top-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .top-nav ul a {
+    background-color: transparent;
+    margin-bottom: 0;
+  }
+  header div {
+    display: flex;
+    text-align: left;
+  }
+  header div p {
+    order: -1;
+  }
+  section {
+    background-color: var(--color-white);
+    padding: 2rem 0;
+  }
+  section div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  section article {
+    flex-basis: calc(50% - 1rem);
+  }
+  .footer-nav ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    list-style-type: none;
+  }
+  .footer-nav ul a {
+    text-decoration: none;
+  }
+  .footer-nav > a {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  section article {
+    flex-basis: calc(33.333% - 1rem);
+  }
+}
