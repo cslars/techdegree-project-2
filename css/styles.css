@@ -1,3 +1,5 @@
+/* ----- Variabels ----- */
+
 :root {
   --color-white: #fff;
   --color-off-white: #fafafa;
@@ -8,12 +10,14 @@
   --font-secondary: 'Merriweather', serif;
 }
 
+/* ----- Base Styles ----- */
+
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-size: 1.25em;
+  font-size: 1.25em; /* 20px */
 }
 
 img {
@@ -34,6 +38,8 @@ body {
   line-height: 1.5;
 }
 
+/* ----- Mobile Styles ----- */
+
 header {
   text-align: center;
 }
@@ -41,10 +47,6 @@ header {
 .logo {
   font-family: var(--font-secondary);
   margin-bottom: 0;
-}
-
-header img {
-  max-width: 350px;
 }
 
 .top-nav ul {
@@ -56,8 +58,9 @@ header img {
   display: block;
   padding: 0.5rem 0;
   margin-bottom: 0.5rem;
-  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
   background-color: var(--color-white);
   color: var(--color-dark);
   transition: all 0.2s ease-in;
@@ -66,6 +69,14 @@ header img {
 .top-nav ul a:hover {
   background-color: var(--color-ocean-blue);
   color: var(--color-white);
+}
+
+header p {
+  color: var(--color-light-gray);
+}
+
+header img {
+  max-width: 350px;
 }
 
 section {
@@ -103,6 +114,10 @@ footer {
   text-align: center;
 }
 
+footer p {
+  padding: 0 1rem 1rem 1rem;
+}
+
 footer address {
   font-style: normal;
 }
@@ -133,7 +148,7 @@ footer hr {
   text-decoration: none;
 }
 
-/* ----- Tablet Breakpoint ----- */
+/* ----- Tablet Styles ----- */
 
 @media only screen and (min-width: 768px) {
 
@@ -183,6 +198,14 @@ footer hr {
     flex-basis: calc(50% - 1rem);
   }
 
+  #contact p {
+    padding: 0 5rem;
+  }
+
+  address {
+    padding: 1rem 0;
+  }
+
   .footer-nav ul {
     display: flex;
     gap: 1rem;
@@ -199,7 +222,7 @@ footer hr {
   }
 }
 
-/* ----- Desktop Breakpoint ----- */
+/* ----- Desktop Styles ----- */
 
 @media only screen and (min-width: 1024px) {
 
@@ -211,6 +234,10 @@ footer hr {
 
   section article {
     flex-basis: calc(33.333% - 1rem);
+  }
+
+  #contact p {
+    padding: 0 10rem;
   }
 
 }
